@@ -1,10 +1,11 @@
 from rest_framework import viewsets
-from .models import Order
-from .serializer import OrderSerializer
+from .models import User
+from .serializer import UserSerializer
 # Create your views here.
 
 
 class OrderViewset(viewsets.ModelViewSet):
-    queryset = Order.objects.all()
-    serializer_class = OrderSerializer
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
     http_method_names = ['get']
+    
